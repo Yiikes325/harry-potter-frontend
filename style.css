@@ -86,19 +86,26 @@ main {
     height: 90%;
 }
 
-.front {
+.front, .back {
+    border-radius: 2rem;
     position: relative;
     backface-visibility: hidden;
+}
+
+ .front {
+    /* position: relative; */
     background-color: mediumaquamarine;
     z-index: 1;
     overflow: hidden;
 }
 
 .back {
-    position: absolute;
-    backface-visibility: hidden;
-    background-color: white;
-    transform: rotateY(180deg);
+    background-color: grey;
+    transform: rotateY('180');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hide {
